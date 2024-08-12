@@ -1,3 +1,6 @@
+import { products } from "../utils/Data";
+
+
 export const CartReducer = (state, { type, payload }) => {
   switch (type) {
     case "ADD_TO_CART":
@@ -13,6 +16,7 @@ export const CartReducer = (state, { type, payload }) => {
       };
 
     case "INCREMENT":
+        console.log("Inside Increment")
       return {
         ...state,
         cartItem: state.cartItem.map((item) =>

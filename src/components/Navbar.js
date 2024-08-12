@@ -37,15 +37,24 @@ export const Navbar = () => {
           </svg>
         </button>
         <div className={`lg:flex lg:items-center lg:space-x-6 ${isOpen ? 'block' : 'hidden'}`}>
-          <Link to={"/product"} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-lg">Home</Link>
+       
           
 
-          
+
           <Link to={"/cart"} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-lg">
-          <ShoppingCart />
 
-          <p>{cartItem.length}</p>
-          Cart</Link>
+          
+<button type="button" class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg ">
+<div>
+    <ShoppingCart/>
+</div>
+<span class="sr-only">Cart Item</span>
+  <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2">{cartItem.length}</div>
+</button>
+
+      
+
+         </Link>
     
         </div>
       </div>
