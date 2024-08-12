@@ -2,7 +2,7 @@ import { v4 as uuid } from "uuid";
 
 export const products = [
     {
-      _id: uuid(),
+      id: uuid(),
       title: "Fender Guitar A10",
       description: "Kadence Frontier Jumbo Semi Acoustic Guitar With Die Cast Keys Super Combo (Bag, 1 pack Strings, Strap, Picks, Capo, Tuner (natural)",
       price: 9000,
@@ -11,7 +11,7 @@ export const products = [
       image:"https://user-images.githubusercontent.com/55450200/159144720-8f58d131-76be-4c72-a461-4f4fd81da5cd.jpeg"
     },
     {
-      _id: uuid(),
+      id: uuid(),
       title: "Intern Acoustic Guitar Kit",
       description: "Intern INT-38C Acoustic Guitar Kit, With Bag, Strings, Pick And Strap, Black",
       price: 1000,
@@ -20,7 +20,7 @@ export const products = [
       image:"https://user-images.githubusercontent.com/55450200/159144725-6eb83947-174d-4bac-9e07-e12ed9bbe0b3.jpeg"
     },
     {
-      _id: uuid(),
+      id: uuid(),
       title: "Medellin  AcousticGuitar ",
       description: "Medellin 38\" Acoustic Guitar Blue Burst Carbon Fiber body+(Free Online Learning Course) - Durable Matt finish with handrest, strings, strap, bag, 3 Picks, capo, stand.",
       price: 2000,
@@ -29,7 +29,7 @@ export const products = [
       image:"https://user-images.githubusercontent.com/55450200/159144726-39cbff5f-7287-4a79-8c86-ab98a3a840f8.jpeg"
     },
     {
-      _id: uuid(),
+      id: uuid(),
       title: "Giuson GuitarSDD",
       description: "Giuson Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
       price: 3000,
@@ -40,7 +40,7 @@ export const products = [
   
   
     {
-      _id: uuid(),
+      id: uuid(),
       title: "Giuson GuitarBlack",
       description: "Giuson Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
       price: 4000,
@@ -51,7 +51,7 @@ export const products = [
   
   
     {
-      _id: uuid(),
+      id: uuid(),
       title: "Giuson GuitarBlack",
       description: "Giuson Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
       price: 7000,
@@ -60,7 +60,7 @@ export const products = [
     },
   
     {
-      _id: uuid(),
+      id: uuid(),
       title: "Giuson Guitar Yellow black",
       description: "Giuson Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
       price: 1000,
@@ -70,7 +70,7 @@ export const products = [
   
   
     {
-      _id: uuid(),
+      id: uuid(),
       title: "Giuson Guitar  Orange",
       description: "Giuson Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
       price: 1500,
@@ -78,7 +78,7 @@ export const products = [
       image:"https://user-images.githubusercontent.com/55450200/159148454-a7bc4f70-ef32-4606-8bda-2280c82888e8.jpg"
     },
   {
-      _id: uuid(),
+      id: uuid(),
       title: "Giuson Guitar",
       description: "Giuson Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
       price: 2000,
@@ -87,7 +87,7 @@ export const products = [
     },
   
     {
-      _id: uuid(),
+      id: uuid(),
       title: "Yamaha Electic Guitar",
       description: "Giuson Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
       price: 1000,
@@ -97,7 +97,7 @@ export const products = [
   
   
     {
-      _id: uuid(),
+      id: uuid(),
       title: "Yamaha Electic Guitar",
       description: "Giuson Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
       price: 5000,
@@ -106,7 +106,7 @@ export const products = [
     },
   
     {
-      _id: uuid(),
+      id: uuid(),
       title: "Yamaha Electic Guitar",
       description: "Giuson Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
       price: 3000,

@@ -1,9 +1,25 @@
-import React from 'react'
+import React  , {useContext }from 'react'
 import { Link } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react';
+import { CartContext } from '../context/cart-context';
 
 
-export const Card = ({title, description, price, image}) => {
+
+export const Card = ({title, description, price, image,id}) => {
+
+    const { state, dispatch } = useContext(CartContext);
+    const { cartItem } = state;
+
+
+    const cartHandler=(title, description, price, image,id)=>{
+        console.log("Adding to Cart" , id)
+        dispatch({
+            type: "ADD_TO_CART",
+            payload: { title, _id:id, image, description, price },
+          })
+        //create an array which stores cart item  in the context
+        // adding into cart get the item fetch the 
+    }
   return (
     
 
@@ -20,10 +36,18 @@ export const Card = ({title, description, price, image}) => {
         Check
        
       </Link>
-      <Link to="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-[#e2e8f0] rounded-lg  ">
-        Add To Cart { ""}
-    
-      </Link>
+      <button to="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-[#e2e8f0] rounded-lg  " >
+      {cartItem.some((item) => item._id === id) ? (
+            <Link
+              to="/cart"
+             
+            >
+              {" "}
+              Go to cart{" "}
+            </Link>
+          ) : <p onClick={()=>cartHandler(title, description, price, image,id)}>Add to Cart</p>
+        }
+      </button>
     </div>
   </div>
 
