@@ -18,6 +18,7 @@ export const CartCard = ({title, description, price, image,_id,quatity}) => {
 
     const decrementCartItem=(_id)=>{
         console.log(_id)
+        
         dispatch({
             type: "DECREMENT",
             payload: {  _id },
@@ -41,10 +42,10 @@ export const CartCard = ({title, description, price, image,_id,quatity}) => {
     <div className="flex flex-col justify-between p-4 leading-normal">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
-        <p>Price: {quatity * price}</p>
+        <p>Price: {  price}</p>
     
       <div className='m-4'>
-      <button className='border border-grey-100 h-6 w-6 text-center' onClick={()=>decrementCartItem(_id)}>- </button>  <span>{quatity}</span> <button className='border border-grey-100 h-6 w-6 text-center' onClick={()=>incrementCartItem(_id)}>+</button>
+      <button className={`border border-grey-100 h-6 w-6 text-center ${quatity==1 ? "cursor-not-allowed": ""}`} disabled={quatity==1 ? true : false} onClick={()=>decrementCartItem(_id)}>- </button>  <span>{quatity}</span> <button className='border border-grey-100 h-6 w-6 text-center '  onClick={()=>incrementCartItem(_id)}>+</button>
       </div>
       <button className='focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900' onClick={()=>removeCartProduct(_id)}>Remove Item</button>
     </div>

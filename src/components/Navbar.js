@@ -40,7 +40,7 @@ export const Navbar = () => {
        
           
 
-
+        <Link to={"/product"} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-lg"> Home </Link>
           <Link to={"/cart"} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-lg">
 
           
