@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/cart-context';
+import { errorNotify } from '../utils/toastify';
+
 
 export const CartCard = ({title, description, price, image,_id,quatity}) => {
 
@@ -26,11 +28,12 @@ export const CartCard = ({title, description, price, image,_id,quatity}) => {
     }
 
     const removeCartProduct=(id)=>{
+
         dispatch({
             type: "REMOVE_FROM_CART",
             payload: {  _id },
           })
-
+errorNotify("Successfully Removed from Cart")
 
     }
   return (
@@ -43,7 +46,7 @@ export const CartCard = ({title, description, price, image,_id,quatity}) => {
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
         <p>Price: {  price}</p>
-    
+    <p>Sub Total: {quatity*price}</p>
       <div className='m-4'>
       <button className={`border border-grey-100 h-6 w-6 text-center ${quatity==1 ? "cursor-not-allowed": ""}`} disabled={quatity==1 ? true : false} onClick={()=>decrementCartItem(_id)}>- </button>  <span>{quatity}</span> <button className='border border-grey-100 h-6 w-6 text-center '  onClick={()=>incrementCartItem(_id)}>+</button>
       </div>

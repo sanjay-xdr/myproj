@@ -14,9 +14,9 @@ export const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-[#991b1b] p-4">
+    <nav className="bg-[#1e1b4b] p-4  shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#" className="text-white text-2xl font-bold">Brand</a>
+        <a href="#" className="text-white text-2xl font-bold">Shopper</a>
         <button
           onClick={toggleMenu}
           className="text-white block lg:hidden"
@@ -40,16 +40,16 @@ export const Navbar = () => {
        
           
 
-        <Link to={"/product"} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-lg"> Home </Link>
-          <Link to={"/cart"} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-lg">
+        <Link to={"/"} className="text-white hover:bg-[#4338ca] px-3 py-2 rounded-md text-lg"> Home </Link>
+          <Link to={"/cart"} className="text-white hover:bg-[#4338ca] px-3 py-2 rounded-md text-lg">
 
           
-<button type="button" class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg ">
+<button type="button" class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white rounded-lg ">
 <div>
     <ShoppingCart/>
 </div>
 <span class="sr-only">Cart Item</span>
-  <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2">{cartItem.length}</div>
+{cartItem.length==0 ? "" :   <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-[#818cf8] border-2 border-white rounded-full -top-2 -end-2">{cartItem.length}</div>}
 </button>
 
       

@@ -2,6 +2,9 @@ import React  , {useContext }from 'react'
 import { Link } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react';
 import { CartContext } from '../context/cart-context';
+import { successNotify } from '../utils/toastify';
+
+
 
 
 
@@ -10,13 +13,15 @@ export const Card = ({title, description, price, image,id}) => {
     const { state, dispatch } = useContext(CartContext);
     const { cartItem } = state;
 
-
+  
     const cartHandler=(title, description, price, image,id)=>{
         console.log("Adding to Cart" , id)
         dispatch({
             type: "ADD_TO_CART",
             payload: { title, _id:id, image, description, price },
           })
+          successNotify("Successfully Added to Cart");
+
         //create an array which stores cart item  in the context
         // adding into cart get the item fetch the 
     }
@@ -32,11 +37,10 @@ export const Card = ({title, description, price, image,id}) => {
         <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
       </a>
       <p className="mb-3 text-gray-700 dark:text-gray-400 text-sm">{description}</p>
-      <Link to="#" className="inline-flex items-center px-3 py-2 m-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        Check
-       
-      </Link>
-      <button to="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-[#e2e8f0] rounded-lg  " >
+
+      <p className="mb-3 text-gray-700 dark:text-gray-400 text-sm font-bold">Price Rs. {price}</p>
+      
+      <button to="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#3730a3] rounded-lg hover:shadow-lg	  " >
       {cartItem.some((item) => item._id === id) ? (
             <Link
               to="/cart"
@@ -49,6 +53,7 @@ export const Card = ({title, description, price, image,id}) => {
         }
       </button>
     </div>
+
   </div>
 
   )

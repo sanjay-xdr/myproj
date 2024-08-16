@@ -1,53 +1,7 @@
 import { v4 as uuid } from "uuid";
 
 export const products = [
-    {
-      id: uuid(),
-      title: "Fender Guitar A10",
-      description: "Kadence Frontier Jumbo Semi Acoustic Guitar With Die Cast Keys Super Combo (Bag, 1 pack Strings, Strap, Picks, Capo, Tuner (natural)",
-      price: 9000,
-      categoryName: "AcousticGuitar",
-      rating:4,
-      image:"https://user-images.githubusercontent.com/55450200/159144720-8f58d131-76be-4c72-a461-4f4fd81da5cd.jpeg"
-    },
-    {
-      id: uuid(),
-      title: "Intern Acoustic Guitar Kit",
-      description: "Intern INT-38C Acoustic Guitar Kit, With Bag, Strings, Pick And Strap, Black",
-      price: 1000,
-      categoryName: "AcousticGuitar",
-      rating:3,
-      image:"https://user-images.githubusercontent.com/55450200/159144725-6eb83947-174d-4bac-9e07-e12ed9bbe0b3.jpeg"
-    },
-    {
-      id: uuid(),
-      title: "Medellin  AcousticGuitar ",
-      description: "Medellin 38\" Acoustic Guitar Blue Burst Carbon Fiber body+(Free Online Learning Course) - Durable Matt finish with handrest, strings, strap, bag, 3 Picks, capo, stand.",
-      price: 2000,
-      categoryName: "AcousticGuitar",
-      rating:2,
-      image:"https://user-images.githubusercontent.com/55450200/159144726-39cbff5f-7287-4a79-8c86-ab98a3a840f8.jpeg"
-    },
-    {
-      id: uuid(),
-      title: "Giuson GuitarSDD",
-      description: "Giuson Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
-      price: 3000,
-      categoryName: "AcousticGuitar",
-      rating:1,
-      image:"https://user-images.githubusercontent.com/55450200/159148446-5869cb77-9c69-436a-96c2-955f414f17fe.jpg"
-    },
   
-  
-    {
-      id: uuid(),
-      title: "Giuson GuitarBlack",
-      description: "Giuson Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
-      price: 4000,
-      categoryName: "AcousticGuitar",
-      rating:5,
-      image:"https://user-images.githubusercontent.com/55450200/159148447-9b6fc91e-4c37-44d0-bcaf-0975393e4a8f.jpg"
-    },
   
   
     {
@@ -114,4 +68,13 @@ export const products = [
       image:"https://user-images.githubusercontent.com/55450200/159148335-2f7f025f-e535-4969-b368-30447ea1ff46.jpg"
     },
 
+
+    {
+      id: uuid(),
+      title: "Fender Electic Guitar",
+      description: "Fender Venus Black 41 Inch Rosewood Fretboard Acoustic Guitar With Bag,Strap,1 Set of Extra Strings and 2 Picks by K-Retail",
+      price: 3000,
+      categoryName: "Electric Guitar",
+      image:"https://user-images.githubusercontent.com/55450200/159148335-2f7f025f-e535-4969-b368-30447ea1ff46.jpg"
+    },
 ]

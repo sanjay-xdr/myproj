@@ -4,6 +4,9 @@ import { ProductListing } from './pages/ProductListing';
 import { Routes, Route, Link } from "react-router-dom";
 import { Cart } from './pages/Cart';
 import { Navbar } from './components/Navbar';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function App() {
@@ -14,10 +17,22 @@ function App() {
     
     <Routes>
       
-      <Route path='/product' element={<ProductListing/>}/>
+      <Route path='/' element={<ProductListing/>}/>
       <Route path='/cart' element={<Cart/>}/>
 
     </Routes>
+    <ToastContainer
+position="bottom-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
     </>
   );
 }
