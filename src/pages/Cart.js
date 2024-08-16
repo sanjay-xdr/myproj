@@ -14,6 +14,11 @@ export const Cart = () => {
         setTotalPrice(total);
     }, [cartItem]);
 
+    const checkoutHandler=()=>{
+      alert("Checkout Successful")
+      window.location.href = '/';
+
+    }
     return (
         <div className="min-h-screen bg-gray-100">
             {cartItem.length !== 0 ? (
@@ -28,7 +33,7 @@ export const Cart = () => {
                         <button
                             type="button"
                             className="w-full text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center"
-                            onClick={() => console.log("Checkout Successful")}
+                            onClick={() => checkoutHandler()}
                         >
                             Checkout
                         </button>
